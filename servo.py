@@ -53,7 +53,7 @@ def PORT(pin):                                # assigning PIN by taking PORT val
         IO.output(12,1)
     else:
         IO.output(12,0)   
-if(pin&0x10 == 0x10):
+    if(pin&0x10 == 0x10):
         IO.output(25,1)
     else:
         IO.output(25,0)
@@ -96,7 +96,7 @@ try:
         send_a_character(0x54);
         send_a_character(0x52);
         send_a_character(0x41);
-        send_a_character(0x4C);              
+        send_a_character(0x30);              
         time.sleep(1)              
 except KeyboardInterrupt:
     pass
