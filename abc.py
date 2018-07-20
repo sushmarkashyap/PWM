@@ -69,10 +69,7 @@ def PORT(pin):
     else:
         IO.output(18,0)                       
         
-while 1:   
-    send_a_command(0x01)                    
-    send_a_command(0x38)                   
-    send_a_command(0x0E)                   
+while 1:                 
     send_a_character(0x43)                 
     send_a_character(0x49)                 
     send_a_character(0x52)                    
