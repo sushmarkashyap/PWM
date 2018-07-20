@@ -18,13 +18,13 @@ IO.setup(23,IO.OUT)
 IO.setup(18,IO.OUT)    
 
 def send_a_command (command):               
-    PORT(pin);                                                
+    PORT(pin)                                                
     IO.output(6,0)                                          
     IO.output(22,1)                                         
     time.sleep(0.05)
     IO.output(22,0)                                        
     pin=0
-    PORT(pin);                                                
+    PORT(pin)                                                
 
 def send_a_character (character):                
     pin=character
@@ -75,28 +75,28 @@ p.start(7.5)
 
 try:
     while True:            
-        send_a_command(0x01);              
-        send_a_command(0x38);                   
-        send_a_command(0x0E);                
+        send_a_command(0x01)              
+        send_a_command(0x38)                   
+        send_a_command(0x0E)                
        
         p.ChangeDutyCycle(7.5)  
-        send_a_character(0x30);
+        send_a_character(0x30)
         time.sleep(1) 
        
         p.ChangeDutyCycle(12.5)    
-        send_a_character(0x31);
-        send_a_character(0x38);
-        send_a_character(0x30);
+        send_a_character(0x31)
+        send_a_character(0x38)
+        send_a_character(0x30)
         time.sleep(1)
        
         p.ChangeDutyCycle(2.5)   
-        send_a_character(0x4E);
-        send_a_character(0x45);
-        send_a_character(0x55);
-        send_a_character(0x54);
-        send_a_character(0x52);
-        send_a_character(0x41);
-        send_a_character(0x30);              
+        send_a_character(0x4E)
+        send_a_character(0x45)
+        send_a_character(0x55)
+        send_a_character(0x54)
+        send_a_character(0x52)
+        send_a_character(0x41)
+        send_a_character(0x30)              
         time.sleep(1)              
 except KeyboardInterrupt:
     pass
