@@ -74,11 +74,7 @@ p = IO.PWM(4,50)
 p.start(7.5)
 
 try:
-    while True:            
-        send_a_command(0x01)              
-        send_a_command(0x38)                   
-        send_a_command(0x0E)                
-       
+    while True:
         p.ChangeDutyCycle(7.5)  
         send_a_character(0x30)
         time.sleep(1) 
